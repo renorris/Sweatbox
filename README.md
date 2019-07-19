@@ -8,7 +8,7 @@ An FSD server written in Ruby designed to mimic a simple VATSIM sweatbox.
 - Mysql server (`apt-get install mysql-server`)
 
 On the mysql console:
-- Create sweatbox DB user: `CREATE USER ‘sweatbox’@‘localhost IDENTIFIED BY ‘sweatbox’;`
+- Create sweatbox DB user: `CREATE USER 'sweatbox'@'localhost' IDENTIFIED BY 'sweatbox';`
 - Create database: `CREATE DATABASE SWEATBOX;`
 - Give user permissions: `GRANT ALL PRIVILEGES ON SWEATBOX.* TO 'sweatbox'@'localhost'`
 
