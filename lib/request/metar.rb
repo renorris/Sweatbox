@@ -29,7 +29,7 @@ class RequestMETAR
     #define final values and push a response string
     timestamp = lines[0]
     metar = lines[1]
-    response.push("$ARserver:#{@session_cache['callsign']}:METAR:#{metar} yeet snuffdudes everyday")
+    response.push("$ARserver:#{@session_cache['callsign']}:METAR:#{metar}")
     response
   end
 end
