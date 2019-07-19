@@ -32,3 +32,14 @@ The server will run on all network interfaces by default on port 6809.
 Once started, you can connect with a client like VRC.
 
 See wiki for more usage information within the sweatbox.
+
+## Features
+
+- User accounts
+- Modify flightplans and sync across all clients
+- Move aircraft
+- Instructor commands to manipulate aircraft
+- Change position update interval (1sec-5sec)
+- See other controllers online in Controllers and Chat windows (VRC)
+- NOAA metars for ATC client
+- Broadcast messages
