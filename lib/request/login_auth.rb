@@ -37,7 +37,7 @@ class RequestLoginAuth
     if login_check[0]
       puts "Client successfully connected"
       @response.push("#TMSERVER:#{@session_cache["callsign"]}:#{login_check[1]}\r\n")
-      @response.push("#TMSERVER:#{@session_cache["callsign"]}:Welcome, #{@session_cache['full_name'].split(" ")[0]}! You've connected to Reese's Sweatbox.\r\n")
+      @response.push("#TMSERVER:#{@session_cache["callsign"]}:Welcome, #{@session_cache['full_name'].split(" ")[0]}! You've connected to the sweatbox!\r\n")
       @response.push("#TMSERVER:#{@session_cache["callsign"]}:Callsign -> '#{@session_cache['callsign']}'. Rating -> #{ATC_RANKS[@session_cache['atc_rating'].to_i]}\r\n")
       @session_cache['logged_in?'] = true
     else

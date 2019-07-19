@@ -4,6 +4,7 @@ require "mysql2"
 require 'io/console'
 require 'term/ansicolor'
 require 'securerandom'
+require 'digest'
 
 #+--------------+-------------+------+-----+---------+-------+
 #| Field        | Type        | Null | Key | Default | Extra |
@@ -56,7 +57,8 @@ def run
         end
       end
       puts "Enter password for account:"
-      password = gets.chomp
+      raw_password = gets.chomp
+      password = Digest::SHA256.hexdigest(raw_password)
       puts ""
       puts "Creating user account with details: Certificate ID: #{cert_id} | ATC Rating: #{ATC_RANKS[atc_rating.to_i]} | Full Name: #{full_name}"
       result = SQL_CLIENT.query("INSERT INTO certs (cert_id, password, atc_rating, full_name) VALUES ('#{cert_id}', '#{password}', '#{atc_rating}', '#{full_name}');")
@@ -152,7 +154,8 @@ def run
         SQL_CLIENT.query("UPDATE certs SET full_name='#{rename}' WHERE cert_id='#{accountid}';")
       elsif choice == 'p'
         puts "Change password to what?"
-        password = gets.chomp
+        raw_password = gets.chomp
+	password = Digest::SHA256.hexdigest(raw_password)
         SQL_CLIENT.query("UPDATE certs SET password='#{password}' WHERE cert_id='#{accountid}';")
       elsif choice == 'a'
         puts ATC_RANKS
