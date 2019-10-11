@@ -2,7 +2,7 @@
 An FSD server written in Ruby designed to mimic a simple VATSIM sweatbox.
 
 ## Documentation Tribute
-Without [https://studentweb.uvic.ca/~norrisng/fsd-doc/](this documentation) by @norrisng, it would have taken me ages to reverse-engineer the FSD protocol. If you're looking for an in-depth look into the basics of VATSIM's protocol, that's where to go.
+Without [this documentation](https://studentweb.uvic.ca/~norrisng/fsd-doc/) by @norrisng, it would have taken me ages to reverse-engineer the FSD protocol. If you're looking for an in-depth look into the basics of VATSIM's protocol, that's where to go.
 
 ## Installation and Dependencies
 
