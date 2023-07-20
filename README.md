@@ -1,28 +1,25 @@
 # Sweatbox
 An FSD server written in Ruby designed to mimic a simple VATSIM sweatbox.
-
-## Documentation Tribute
-Without [this documentation](https://studentweb.uvic.ca/~norrisng/fsd-doc/) by @norrisng, it would have taken me ages to reverse-engineer the FSD protocol. If you're looking for an in-depth look into the basics of VATSIM's protocol, that's where to go.
+[FSD Protocol Docs](https://fsd-doc.norrisng.ca/site/index.html)
 
 ## Installation and Dependencies
 
-- Only tested on Ubuntu 16.04 or 18.04
-- Ruby 2.5 or above (`apt-get install ruby`)
-- Mysql server (`apt-get install mysql-server`)
+- \> Ruby 2.5
+- MySQL server
 
-On the mysql console:
+MySQL:
 - Create sweatbox DB user: `CREATE USER 'sweatbox'@'localhost' IDENTIFIED BY 'sweatbox';`
 - Create database: `CREATE DATABASE SWEATBOX;`
 - Give user permissions: `GRANT ALL PRIVILEGES ON SWEATBOX.* TO 'sweatbox'@'localhost'`
 
-Import database template into mysql: `mysql SWEATBOX < sweatbox_database_template.db`
+Import database template: `mysql SWEATBOX < sweatbox_database_template.db`
 
-Ruby Dependencies:
+Dependencies:
 
-- Mysql2 gem dependencies: (`apt-get install mysql-client libmysqlclient-dev bundler`)
-- mysql2 gem (`gem install mysql2`)
-- geokit gem (`gem install geokit`)
-- ansicolor gem (`gem install term-ansicolor`)
+- MySQL gem dependencies: (`apt-get install mysql-client libmysqlclient-dev bundler`)
+- mysql2 (`gem install mysql2`)
+- geokit (`gem install geokit`)
+- ansicolor (`gem install term-ansicolor`)
 
 ## Usage
 
